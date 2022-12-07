@@ -20,7 +20,7 @@ public class Main {
 	// create menu for for the 5 choices
 	menu1();
 		int choice = scanner.nextInt();
-		while (choice!=5) {
+		while (true) {
 			
 			if(choice ==1) {
 			//Reads in all appropriate information.");
@@ -52,30 +52,31 @@ public class Main {
 			
 			// Implement search
 			else if(choice== 3) {
+				int checkValid = -1;
 			 menu2();
 			 int option = scanner.nextInt();
-			 while(option!=4) {
+			 while(option!=6) {
 				
 			 
 			 if(option==1) {
 					 String firstname = scanner.next();
-					 vipBook.searchEntry(firstname);
+					 checkValid = vipBook.searchEntry(firstname);
 				 }
 				 else if(option==2) {
 					 String last = scanner.next();
-					 vipBook.searchEntry(last);
+					 checkValid = vipBook.searchEntry(last);
 				 }
 				 
 				 else if(option ==3) {
 					 String phone = scanner.next();
-					 vipBook.searchEntry(phone);
+					 checkValid = vipBook.searchEntry(phone);
 				 }
 				 else if(option== 4) {
 					 String email = scanner.next();
-					 vipBook.searchEntry(email);
+					 checkValid = vipBook.searchEntry(email);
 				 }
 			 }
-			
+			System.out.println("check valide = " + checkValid);
 			}
 			
 			// print all the entries
@@ -86,13 +87,14 @@ public class Main {
 			// clear the address book
 			else if(choice == 5) {
 				vipBook.deleteEntry();
-			System.out.println("\nThe address book is clear");
+				System.out.println("\nThe address book is clear");
 			}
 			
 
 			// Quit 
 
-			else if(choice == 6) {System.out.println("BYE");
+			else if(choice == 6) {
+				System.out.println("BYE");
 			vipBook.quitProgram();
 						}
 			menu1();
@@ -126,91 +128,5 @@ public class Main {
               }
 
 
-//===============================================================================================================
-//	    String input;
-//	    Scanner in = new Scanner(System.in);
-//
-//    AddressBook addressBook = new AddressBook();
-//
-//	    boolean stop = false;
-//      do{
-//
-//        System.out.println("\nMain Menu");
-//	        System.out.println("1. Add an Entry");
-//	        System.out.println("2. Remove an Entry");
-//        System.out.println("3. Search for a specific entry");
-//	        System.out.println("4. Print the contents of the address book");
-//        System.out.println("5. Delete the contents of the address book");
-//	        System.out.println("6. Quit the program");
-//	        System.out.print("Please enter Choices from 1 to :6 \n");
-//	        input =(in.next());
-//
-//
-//
-//		
-//	        switch (input) {
-//            case "1":
-//                //create a new entry for the addressbook
-//                Entry entry = new Entry(input, input, input, input);
-//	                System.out.println("***Adding Entry in Address Book***");
-//
-//	                System.out.print("First Name: ");
-//	                entry.setFirstName(in.next());
-//
-//                System.out.print("Last Name: ");
-//	                entry.setLastName(in.next());
-//
-//	                System.out.print("PhoneNumber: ");
-//	                entry.setPhoneNumber(in.next());
-//
-//                System.out.print("Email Address: ");
-//	                entry.setAddress(in.next());
-//
-//	                //add our new entry to the addressbook
-//	                addressBook.add(entry);
-//
-//	                System.out.println("Added a new entry.");
-//	                break;
-//
-//	            case "2":
-//	                System.out.println("Enter the index of the entry, which you want to delete:");
-//	                //delete the entry at the given index
-//	                addressBook.delete(in.next());
-//
-//                break;
-//	                
-//	            case "3":
-//	                System.out.println("Enter the index of the entry, which you want to delete:");
-//                //Search for a specific entry
-//               
-//
-//	                break;    
-//	            
-//
-//	            case "4":
-//                System.out.println("Your addressbook contains the following entries:");
-//	                //print the contents of the address book
-//	                Entry[] listOfEntries = addressBook.viewAll();
-//
-//	                //for every entry in the array
-//                for (int i = 0; i < listOfEntries.length; i++) {
-//                    System.out.println(listOfEntries[i].toString());
-//	                }
-//
-//                break;
-//            case "5":	            	//delete the contents of the address book
-//           	
-//
-//                break;
-//
-//          default:
-//            break;
-//      }
-//  //execute while stop is false
-//    } while (!input.equals("6"));
-//    System.out.println("***THANK YOU FOR USING MY PROGRAM...***");
-	    
-	
-//	}
 }	
 

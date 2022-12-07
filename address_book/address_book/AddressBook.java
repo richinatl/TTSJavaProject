@@ -30,9 +30,10 @@ public class AddressBook {
 	public int searchEntry(String s) {
 		for(int i= 0;i< colleagues.size(); i++) {
 			
-			if(colleagues.get(i).getFirstName().equals(s) || colleagues.get(i).getlastName().equals(s) || colleagues.get(i).getAddress().equals(s)||colleagues.get(i).getPhoneNumber(s).equals(s)) 
-				//System.out.println(colleagues.get(i));
+			if(colleagues.get(i).getFirstName().equals(s) || colleagues.get(i).getlastName().equals(s) || colleagues.get(i).getAddress().equals(s)||colleagues.get(i).getPhoneNumber(s).equals(s)) { 
+				System.out.println("found" + s);
 				return i;
+			}
 		
 		}
 		return -1;
@@ -48,9 +49,10 @@ public class AddressBook {
 	
 	// Clear the address book
 	public void deleteEntry() {
-	    for(int i=0; i<colleagues.size();i++)
-	        colleagues.clear();
-           // System.out.print(colleagues.remove(i));
+		this.colleagues.clear();
+//		while (!colleagues.isEmpty())
+//	        colleagues.remove(0);
+        System.out.println("check");
       
 	}
 	
@@ -60,20 +62,6 @@ public class AddressBook {
 		
 	}
 
-//	public void add(Entry entry) {
-//		// TODO Auto-generated method stub
-//		
-//	}
-//
-//	public void delete(String next) {
-//		// TODO Auto-generated method stub
-//		
-//	}
-//
-//	public Entry[] viewAll() {
-//		// TODO Auto-generated method stub
-//		return null;
-//	}
 
 
 		

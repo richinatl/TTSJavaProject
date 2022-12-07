@@ -46,10 +46,7 @@ package address_book;
 		
 	 }
 	 
-//	 public String toString() {
-//		 return "firstName" +  "/n" + lastName + "/n" + address + "/n" + phoneNumber;
-//	 }
-//	 
+	 
 	 public Entry (String firstName, String lastName, String address, String phoneNumber ) {
 		 this.firstName = firstName;
 		 this.lastName = lastName;

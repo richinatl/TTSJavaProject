@@ -4,6 +4,7 @@
   * [Description](#description)
   * [Installation](#installation)
   * [Usage](#usage)
+  * [Languages](#languages)
   * [Licenses](#licenses)
   * [Contributors](#contributors)
   * [Tests](#tests)
@@ -32,6 +33,8 @@
   Download locally and use with Eclipse, or another preferred IDE
   ## Usage
   Run from the main class
+  ## Languages
+  Java developed on Eclipse
   ## Licenses
     This project is covered under the MIT license. To learn more click the license button at the top.
   ## Contributors
